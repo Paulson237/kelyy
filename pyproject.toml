@@ -1,0 +1,13 @@
+[project]
+name = "kely-brain"
+version = "0.1.0"
+description = "A self-improving Company Brain for kely's clients, built on Cognee."
+requires-python = ">=3.10,<3.15"
+dependencies = [
+    "cognee==1.2.0.dev1",
+    "python-dotenv",
+    "openai",
+]
+
+[tool.setuptools]
+packages = ["kely_brain"]

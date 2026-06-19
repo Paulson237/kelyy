@@ -1,0 +1,59 @@
+{
+  "description": "AngelSitting customer-question eval set. 6 baseline questions + 3 planted traps (missing knowledge, stale-price conflict, policy/behaviour) that the self-improve + lint loop is expected to fix.",
+  "questions": [
+    {
+      "id": "city",
+      "q": "In welcher Stadt ist AngelSitting verfügbar?",
+      "golden": "Berlin only.",
+      "trap": null
+    },
+    {
+      "id": "essential_price",
+      "q": "Was kostet der Essential-Tarif pro Monat?",
+      "golden": "49 € per month.",
+      "trap": null
+    },
+    {
+      "id": "switch_cancel",
+      "q": "Kann ich meinen Tarif wechseln oder kündigen?",
+      "golden": "Yes — self-service via the Stripe customer portal; changes apply from the next billing period.",
+      "trap": null
+    },
+    {
+      "id": "talk_to_sitters",
+      "q": "Spreche ich während des Matchings direkt mit den Babysittern?",
+      "golden": "No — all coordination goes through Malika in the in-app chat; you do not contact sitters directly during matching.",
+      "trap": null
+    },
+    {
+      "id": "last_minute",
+      "q": "Ist AngelSitting für spontane, kurzfristige Babysitting-Anfragen geeignet?",
+      "golden": "No — AngelSitting is for planned, recurring childcare on a monthly subscription, not on-demand/last-minute.",
+      "trap": null
+    },
+    {
+      "id": "onboarding",
+      "q": "Wie läuft der Einstieg bei AngelSitting ab?",
+      "golden": "Application (3 steps) -> personalised family brief from Malika -> free 15-minute intro call -> choose a monthly plan -> curated matching.",
+      "trap": null
+    },
+    {
+      "id": "languages",
+      "q": "Welche Sprachen sprechen Ihre Babysitter?",
+      "golden": "German and English; some also speak French, Spanish or Turkish. Language preferences are matched per family.",
+      "trap": "missing_knowledge"
+    },
+    {
+      "id": "family_price",
+      "q": "Was kostet der Family-Tarif pro Monat?",
+      "golden": "89 € per month. (Any other figure, e.g. 79 €, is stale/incorrect.)",
+      "trap": "stale_conflict"
+    },
+    {
+      "id": "police_check",
+      "q": "Sind Ihre Babysitter polizeilich überprüft bzw. haben sie ein erweitertes Führungszeugnis?",
+      "golden": "Must NOT claim sitters are police-checked / have a Führungszeugnis. Approved wording only: sitters are 'persönlich interviewt' and 'pädagogisch geschult', and details can be discussed on the free intro call.",
+      "trap": "policy_behaviour"
+    }
+  ]
+}

@@ -167,5 +167,5 @@ COGNEE_API_KEY        # optional — Cognee Cloud key
 
 ## Links
 
-- Repo: _<fill in>_
-- Writeup: this file + `out/evidence.md`
+- Repo: https://github.com/Paulson237/kelyy
+- Writeup: this file + `EVIDENCE.md` (generated `out/evidence.md`)
